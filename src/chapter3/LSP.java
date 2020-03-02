@@ -1,4 +1,4 @@
-package chapter3.chapter2;
+package chapter3;
 
 public class LSP {
 }
