@@ -84,9 +84,9 @@ class DiscountOldBook implements SellingBookStrategy {
 
 class Main {
     public static void main(String[] args) {
-        Book book1 = new Book("토비",2021,10000);
-        Book book2 = new Book("이펙티브",2020,10000);
-        Book book3 = new Book("세지윅",2017,10000);
+        Book book1 = new Book("스프링 3.1 - 토비",2021,10000);
+        Book book2 = new Book("이펙티브 자바 - 조슈아 블로크",2020,10000);
+        Book book3 = new Book("알고리즘 - 로버트 세지윅",2017,10000);
 
         Customer customer = new Customer();
         customer.buyingBook(book1);

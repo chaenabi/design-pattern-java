@@ -1,6 +1,7 @@
 package chapter6;
 
-//
+
+// 스테이트 패턴.
 class Book {
 
     private State state;
