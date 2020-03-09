@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-interface ObserverPattern { // 추상화된 통보 대상
+public interface ObserverPattern { // 추상화된 통보 대상
     void update();  // 데이터의 변경을 통보했을 때 처리하는 메서드
 }
 
@@ -30,7 +30,6 @@ class ScoreRecord extends Subject { // 구체적인 변경 감시 대상 데이�
     private List<Integer> scores = new ArrayList<>();
     public void addScore(int score) {
         scores.add(score);
-
         //데이터가 변경되면 Subject 클래스의 notifyObservers 메서드를 호출해
         // 각 옵저버(통보 대상 클래스)에게 데이터의 변경을 통보함
         notifyObservers();
@@ -120,8 +119,9 @@ class Client {
     public static void main(String[] args) {
         ScoreRecord scoreRecord = new ScoreRecord();
         DataSheetView dataSheetView = new DataSheetView(scoreRecord, 3);
-        scoreRecord.attach(dataSheetView);
         MinMaxView minMaxView = new MinMaxView(scoreRecord);
+        // 옵저버들을 등록한다.
+        scoreRecord.attach(dataSheetView);
         scoreRecord.attach(minMaxView);
 
         //3개 목록 DataSheetView, 5개 목록 DataSheetView, 그리고 MinMaxView 가 Observer 로 설정됨.
@@ -142,4 +142,5 @@ class Client {
             scoreRecord.addScore(score); // 각 점수 추가 시 최대 5개 목록, 최소/최대 값, 합/평균을 출력함.
         }
     }
+    
 }
