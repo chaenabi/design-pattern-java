@@ -7,10 +7,8 @@ public class Decorator {
     public static void main(String[] args) {
        // DisplayDecorator roadWithLane = new LaneDecorator(new RoadDisplay());
        // roadWithLane.draw();
-
-      //  DisplayDecorator roadWithTraffic = new TrafficDecorator(new RoadDisplay());
-      //  roadWithTraffic.draw();
-
+       // DisplayDecorator roadWithTraffic = new TrafficDecorator(new RoadDisplay());
+       // roadWithTraffic.draw();
        // Display roadWithLaneAndTraffic = new LaneDecorator(new TrafficDecorator(new RoadDisplay()));
        // roadWithLaneAndTraffic.draw();
 
@@ -26,9 +24,7 @@ public class Decorator {
                 road = new TrafficDecorator(road); // 차선 표시를 기능을 동적으로 추가
         }
         road.draw();
-
     }
-
 }
 
 abstract class Display {
