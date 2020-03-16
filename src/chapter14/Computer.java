@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Computer extends ComputerDevice {
     private List<ComputerDevice> components = new ArrayList<ComputerDevice>();
-    
+
     public void addComponent(ComputerDevice component) {
         components.add(component);
     }
